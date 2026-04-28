@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raksha AI — Enrollment</title>
+  <link rel="stylesheet" href="enroll.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <span class="shield">🛡️</span>
+        <h1>Raksha AI Enrollment</h1>
+        <p class="subtitle">Type each sentence below so we can learn your unique typing rhythm. <strong>5 different sentences</strong> will be shown.</p>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-label">
+        <span id="attemptLabel">Attempt 1 of 5</span>
+        <span id="progressPct">0%</span>
+      </div>
+
+      <div class="target-text" id="targetText"></div>
+
+      <div class="input-section">
+        <textarea id="typingArea" rows="4" placeholder="Start typing the sentence above..." autocomplete="off" spellcheck="false"></textarea>
+        <div class="match-bar">
+          <div class="match-fill" id="matchFill"></div>
+        </div>
+        <span class="match-label" id="matchLabel">0% match</span>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-val" id="wpmStat">0</span>
+          <span class="stat-lbl">WPM</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val" id="dwellStat">0</span>
+          <span class="stat-lbl">Avg Dwell (ms)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val" id="flightStat">0</span>
+          <span class="stat-lbl">Avg Flight (ms)</span>
+        </div>
+      </div>
+
+      <div class="passphrase-section" id="passphraseSection" style="display:none;">
+        <h2>Set a Recovery Passphrase</h2>
+        <p class="subtitle">This will be used to unlock your session if your identity can't be verified.</p>
+        <input type="password" id="passphraseInput" placeholder="Enter passphrase (min 6 chars)" />
+        <input type="password" id="passphraseConfirm" placeholder="Confirm passphrase" />
+        <button class="btn-finish" id="finishBtn">Complete Enrollment</button>
+        <p class="error-msg" id="passphraseError"></p>
+      </div>
+
+      <div class="success-screen" id="successScreen" style="display:none;">
+        <div class="success-icon">✅</div>
+        <h2>Enrollment Complete!</h2>
+        <p>Your typing profile has been saved. Raksha AI is now protecting your session.</p>
+        <button class="btn-finish" id="closeBtn">Start Browsing</button>
+      </div>
+    </div>
+  </div>
+  <script src="enroll.js"></script>
+</body>
+</html>
