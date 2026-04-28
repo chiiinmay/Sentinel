@@ -1,0 +1,72 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container { width: 100%; max-width: 560px; padding: 24px; }
+.card {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 59, 92, 0.25);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 80px rgba(255, 59, 92, 0.08);
+}
+.danger-icon { font-size: 64px; margin-bottom: 16px; animation: shake 0.6s ease-in-out; }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+h1 { font-size: 28px; font-weight: 700; color: #ff3b5c; margin-bottom: 8px; }
+.subtitle { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 28px; line-height: 1.6; }
+.info-grid {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  gap: 16px;
+}
+.info-row:last-child { border-bottom: none; }
+.info-label { font-size: 12px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }
+.info-value { font-size: 13px; color: #fff; word-break: break-all; text-align: right; }
+.info-value.risk { color: #ff3b5c; font-weight: 700; font-size: 18px; }
+.actions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.btn {
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #24e498, #1abc7e);
+  color: #000;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(36,228,152,0.4); }
+.btn-danger {
+  background: transparent;
+  color: rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 12px;
+}
+.btn-danger:hover { color: #ff3b5c; border-color: rgba(255,59,92,0.3); }
+.footer-note { font-size: 11px; color: rgba(255,255,255,0.2); }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raksha AI — Blocked</title>
+  <link rel="stylesheet" href="blocked.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="danger-icon">🚫</div>
+      <h1>Link Blocked</h1>
+      <p class="subtitle">Raksha AI detected a potentially dangerous link and prevented navigation.</p>
+      <div class="info-grid">
+        <div class="info-row">
+          <span class="info-label">Blocked URL</span>
+          <span class="info-value" id="blockedUrl">—</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Risk Score</span>
+          <span class="info-value risk" id="riskScore">—</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Risk Level</span>
+          <span class="info-value" id="riskLevel" style="font-weight:700;font-size:15px;">—</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Reason</span>
+          <span class="info-value" id="reasons">—</span>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" id="goBackBtn">← Go Back to Safety</button>
+        <button class="btn btn-danger" id="proceedBtn">Proceed Anyway (Risky)</button>
+      </div>
+      <p class="footer-note">🛡️ Protected by Raksha AI</p>
+    </div>
+  </div>
+  <script src="blocked.js"></script>
+</body>
+
+</html>
