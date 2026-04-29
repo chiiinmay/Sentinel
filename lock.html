@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raksha AI — Session Locked</title>
+  <link rel="stylesheet" href="lock.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="lock-card">
+      <div class="lock-icon" id="lockIcon">🔒</div>
+      <h1>Session Locked</h1>
+      <p class="subtitle">Your typing pattern didn't match. Enter your passphrase to unlock.</p>
+      <div class="attempt-info">
+        <span id="attemptText">Attempt 1 of 5</span>
+      </div>
+      <input type="password" id="passphraseInput" placeholder="Enter your passphrase" autocomplete="off" />
+      <button class="btn-unlock" id="unlockBtn">Unlock Session</button>
+      <p class="error-msg" id="errorMsg"></p>
+      <p class="footer-note">🛡️ Protected by Raksha AI</p>
+    </div>
+  </div>
+  <script src="lock.js"></script>
+</body>
+</html>

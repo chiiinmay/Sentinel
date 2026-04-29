@@ -1,0 +1,86 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2147483647;
+}
+.lock-card {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 59, 92, 0.2);
+  border-radius: 24px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 100px rgba(255, 59, 92, 0.06);
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lock-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.lock-icon.success { animation: none; }
+h1 { font-size: 24px; font-weight: 700; color: #ff3b5c; margin-bottom: 8px; }
+.subtitle { color: rgba(255,255,255,0.45); font-size: 14px; margin-bottom: 24px; line-height: 1.5; }
+.attempt-info {
+  background: rgba(255,59,92,0.08);
+  border: 1px solid rgba(255,59,92,0.15);
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #ff3b5c;
+}
+input[type="password"] {
+  width: 100%;
+  background: #111;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  margin-bottom: 16px;
+  transition: border-color 0.3s;
+  text-align: center;
+  letter-spacing: 4px;
+}
+input[type="password"]:focus { border-color: #24e498; }
+input[type="password"]::placeholder { letter-spacing: 0; color: rgba(255,255,255,0.2); }
+.btn-unlock {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #24e498, #1abc7e);
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+}
+.btn-unlock:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(36,228,152,0.4); }
+.error-msg { color: #ff3b5c; font-size: 13px; min-height: 20px; }
+.footer-note { font-size: 11px; color: rgba(255,255,255,0.15); margin-top: 20px; }
